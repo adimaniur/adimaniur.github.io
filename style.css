@@ -144,6 +144,10 @@ nav a:hover::after {
   margin-bottom: 30px;
 }
 
+.main .content .page {
+  display: none;
+}
+
 .main form .row {
   display: flex;
   flex-direction: column;
