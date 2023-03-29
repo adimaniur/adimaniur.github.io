@@ -1,0 +1,43 @@
+@media (min-width: 1024px) {
+  .hero {
+    height: 400px;
+  }
+
+  .hero img.mobile {
+    display: none;
+  }
+
+  .hero img.desktop {
+    display: block;
+  }
+
+  .hero .user-info {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 0px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 15px;
+  }
+
+  .main .container {
+    flex-direction: row;
+    gap: 105px;
+  }
+
+  .main .side {
+    padding-top: 30px;
+    width: 100%;
+    min-width: 270px;
+  }
+
+  .main .content {
+    border-bottom: none;
+  }
+}
