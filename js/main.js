@@ -38,8 +38,9 @@ inputs.forEach(input => {
 var activePage = document.getElementById('home');
 activePage.style.display = 'block';
 
-function showPage(newPage) {
-  document.getElementById(activePage.id).style.display = 'none';
-  document.getElementById(newPage).style.display = 'block';
-  activePage = document.getElementById(newPage);
+function showPage(newPageID) {
+  activePage.style.display = '';
+  var newPage = document.getElementById(newPageID);
+  newPage.style.display = 'block';
+  activePage = newPage;
 }
