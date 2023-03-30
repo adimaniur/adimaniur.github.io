@@ -26,6 +26,15 @@
     padding: 15px;
   }
 
+  nav a.active {
+    background-color: var(--primary);
+    color: var(--black);
+  }
+
+  nav a.active svg {
+    color: var(--black) !important;
+  }
+
   .main .container {
     flex-direction: row;
     gap: 105px;

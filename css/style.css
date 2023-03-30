@@ -110,8 +110,7 @@ nav a:hover {
   transition: all 0.2s ease;
 }
 
-nav a:hover svg,
-nav a.active svg {
+nav a:hover svg {
   color: var(--black) !important;
 }
 
@@ -131,11 +130,6 @@ nav a::after {
 nav a:hover::after {
   height: 100%;
   transition: all 0.2s ease;
-}
-
-nav a.active {
-  background-color: var(--primary);
-  color: var(--black);
 }
 
 .main .container {
