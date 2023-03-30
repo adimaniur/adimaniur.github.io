@@ -25,12 +25,21 @@ inputs.forEach(input => {
 });
 
 // content tabs
-var activePage = 'home';
-var homePage = document.getElementById(activePage);
+// var activePage = 'home';
+// var homePage = document.getElementById(activePage);
 
-homePage.style.display = 'block';
+// homePage.style.display = 'block';
 
-function showSkills() {
-  document.getElementById('home').style.display = '';
-  document.getElementById('skills').style.display = 'block';
-};
+// function showSkills() {
+//   document.getElementById('home').style.display = '';
+//   document.getElementById('skills').style.display = 'block';
+// };
+
+var activePage = document.getElementById('home');
+activePage.style.display = 'block';
+
+function showPage(newPage) {
+  document.getElementById(activePage.id).style.display = 'none';
+  document.getElementById(newPage).style.display = 'block';
+  activePage = document.getElementById(newPage);
+}
