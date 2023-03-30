@@ -87,7 +87,7 @@ nav li {
   list-style-type: none;
 }
 
-nav a {
+nav .nav-link {
   display: block;
   position: relative;
   text-decoration: none;
@@ -98,23 +98,24 @@ nav a {
   color: var(--white);
   overflow: hidden;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-nav a svg {
+nav .nav-link svg {
   display: block;
   color: var(--primary);
 }
 
-nav a:hover {
+nav .nav-link:hover {
   color: var(--black);
   transition: all 0.2s ease;
 }
 
-nav a:hover svg {
+nav .nav-link:hover svg {
   color: var(--black) !important;
 }
 
-nav a::after {
+nav .nav-link::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -127,7 +128,7 @@ nav a::after {
   z-index: -1;
 }
 
-nav a:hover::after {
+nav .nav-link:hover::after {
   height: 100%;
   transition: all 0.2s ease;
 }
