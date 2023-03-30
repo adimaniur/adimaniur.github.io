@@ -141,7 +141,6 @@ nav .nav-link:hover::after {
 
 .main .content {
   padding: 30px 0 0;
-  border-bottom: 1px solid var(--black);
   margin-bottom: 30px;
 }
 
@@ -204,4 +203,91 @@ nav .nav-link:hover::after {
 .main form button:hover {
   background-color: var(--primary);
   transition: all 0.2s ease;
+}
+
+#skills ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  list-style-type: none;
+  margin: 0 0 50px;
+  padding: 0;
+}
+
+#skills ul:last-of-type {
+  margin-bottom: 0px;
+}
+
+#skills li {
+  background-color: var(--skill-background);
+}
+
+#skills li .percent {
+  color: var(--white);
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#skills li .percent span {
+  padding-left: 15px;
+}
+
+#skills li.html5 .percent {
+  width: 90%;
+  background-color: var(--html);
+  border-left: 5px solid var(--html-secondary);
+}
+
+#skills li.css3 .percent {
+  width: 70%;
+  background-color: var(--css);
+  border-left: 5px solid var(--css-secondary);
+}
+
+#skills li.sass .percent {
+  width: 65%;
+  background-color: var(--sass);
+  border-left: 5px solid var(--skill-default);
+}
+
+#skills li.js .percent {
+  width: 6%;
+  background-color: var(--js);
+  color: var(--black);
+}
+
+#skills li.photoshop .percent {
+  width: 60%;
+  background-color: var(--photoshop);
+  border-left: 5px solid var(--photoshop-secondary);
+}
+
+#skills li.illustrator .percent {
+  width: 55%;
+  background-color: var(--illustrator);
+  border-left: 5px solid var(--illustrator-secondary);
+}
+
+#skills li.details .percent {
+  width: 97%;
+  color: var(--black);
+}
+
+#skills li.responsive .percent {
+  width: 90%;
+  color: var(--black);
+}
+
+#skills li.team .percent {
+  width: 100%;
+  color: var(--black);
+}
+
+#skills li.time .percent {
+  width: 80%;
+  color: var(--black);
 }

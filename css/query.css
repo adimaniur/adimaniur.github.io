@@ -44,9 +44,14 @@
     padding-top: 30px;
     width: 100%;
     min-width: 270px;
+    max-width: 270px;
   }
 
   .main .content {
     border-bottom: none;
+  }
+
+  #skills ul {
+    min-width: 500px;
   }
 }

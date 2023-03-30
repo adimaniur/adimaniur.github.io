@@ -2,6 +2,19 @@
   --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --primary: #a8c460;
   --secondary: #d8b5a2;
+  --skill-background: #f8f8f8;
+  --skill-default: #b4b4b4;
   --black: #282b2d;
   --white: #ffffff;
+
+  --html: #dd4b25;
+  --html-secondary: #e96228;
+  --css: #0079c0;
+  --css-secondary: #008bce;
+  --sass: #c76395;
+  --js: #efd81d;
+  --photoshop: #232136;
+  --photoshop-secondary: #00a5f7;
+  --illustrator: #f79500;
+  --illustrator-secondary: #2f0000;
 }

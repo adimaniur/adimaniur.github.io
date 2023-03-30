@@ -36,7 +36,7 @@ inputs.forEach(input => {
 //   document.getElementById('skills').style.display = 'block';
 // };
 
-var activePage = document.getElementById('home');
+var activePage = document.getElementById('skills');
 activePage.style.display = 'block';
 
 const navLinks = document.querySelectorAll('.nav-link');
@@ -58,9 +58,20 @@ navLinks.forEach(function(navLink) {
 });
 
 function showPage(newPageID) {
-  activePage.style.display = 'none';
+  activePage.style.display = '';
   var newPage = document.getElementById(newPageID);
   newPage.style.display = 'block';
   activePage = newPage;
 }
 
+function slideToNav() {
+  var nav = document.querySelector("nav");
+  if (nav) {
+    var navRect = nav.getBoundingClientRect();
+    var navTop = navRect.top + window.pageYOffset;
+    window.scrollTo({
+      top: navTop,
+      behavior: 'smooth'
+    });
+  }
+}
