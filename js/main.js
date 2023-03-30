@@ -25,6 +25,7 @@ inputs.forEach(input => {
 });
 
 // content tabs
+
 // var activePage = 'home';
 // var homePage = document.getElementById(activePage);
 
@@ -38,14 +39,6 @@ inputs.forEach(input => {
 var activePage = document.getElementById('home');
 activePage.style.display = 'block';
 
-function showPage(newPageID) {
-  activePage.style.display = '';
-  var newPage = document.getElementById(newPageID);
-  newPage.style.display = 'block';
-  activePage = newPage;
-}
-
-// active nav links
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(link => {
@@ -56,3 +49,18 @@ navLinks.forEach(link => {
     this.classList.add('active');
   });
 });
+
+navLinks.forEach(function(navLink) {
+  navLink.addEventListener('click', function() {
+    var newPageID = navLink.getAttribute('data-page');
+    showPage(newPageID);
+  });
+});
+
+function showPage(newPageID) {
+  activePage.style.display = 'none';
+  var newPage = document.getElementById(newPageID);
+  newPage.style.display = 'block';
+  activePage = newPage;
+}
+
