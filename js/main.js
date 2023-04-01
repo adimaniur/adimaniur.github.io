@@ -36,7 +36,7 @@ inputs.forEach(input => {
 //   document.getElementById('skills').style.display = 'block';
 // };
 
-var activePage = document.getElementById('skills');
+var activePage = document.getElementById('home');
 activePage.style.display = 'block';
 
 const navLinks = document.querySelectorAll('.nav-link');
@@ -75,3 +75,13 @@ function slideToNav() {
     });
   }
 }
+
+function slideToFooter() {
+  const scrollHeight = document.body.scrollHeight;
+  const scrollOptions = {
+    top: scrollHeight,
+    behavior: 'smooth'
+  };
+  window.scrollTo(scrollOptions);
+}
+

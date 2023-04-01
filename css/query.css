@@ -18,12 +18,22 @@
     padding-top: 0px;
   }
 
+  nav {
+    position: unset;
+  }
+
   nav ul {
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 325px;
   }
 
   nav .nav-link {
     padding: 15px;
+  }
+
+  nav .nav-scroll,
+  footer .slide-to-nav {
+    display: block;
   }
 
   nav .nav-link.active {
@@ -49,9 +59,18 @@
 
   .main .content {
     border-bottom: none;
+    min-height: calc(100vh - 46px);
   }
 
   #skills ul {
     min-width: 500px;
+  }
+
+  footer .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 0 60px 375px;
+    color: var(--white);
   }
 }

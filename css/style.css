@@ -87,7 +87,8 @@ nav li {
   list-style-type: none;
 }
 
-nav .nav-link {
+nav .nav-link,
+nav .nav-scroll {
   display: block;
   position: relative;
   text-decoration: none;
@@ -101,36 +102,25 @@ nav .nav-link {
   cursor: pointer;
 }
 
+nav .nav-scroll,
+footer .slide-to-nav {
+  display: none;
+}
+
 nav .nav-link svg {
   display: block;
   color: var(--primary);
 }
 
-nav .nav-link:hover {
+nav .nav-link:hover,
+nav .nav-scroll:hover {
+  background-color: var(--secondary);
   color: var(--black);
   transition: all 0.2s ease;
 }
 
 nav .nav-link:hover svg {
   color: var(--black) !important;
-}
-
-nav .nav-link::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: '';
-  background-color: var(--secondary);
-  transition: all 0.2s ease;
-  height: 0px;
-  z-index: -1;
-}
-
-nav .nav-link:hover::after {
-  height: 100%;
-  transition: all 0.2s ease;
 }
 
 .main .container {
@@ -290,4 +280,24 @@ nav .nav-link:hover::after {
 #skills li.time .percent {
   width: 80%;
   color: var(--black);
+}
+
+footer {
+  background-color: var(--black);
+  height: 100vh;
+}
+
+footer .slide-to-nav {
+  margin: 30px 0 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+footer .slide-to-nav:hover svg {
+  fill: var(--primary);
+  transition: all 0.2s ease;
+}
+
+footer .slide-to-nav svg {
+  fill: var(--white);
 }
