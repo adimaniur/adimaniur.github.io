@@ -25,22 +25,26 @@ inputs.forEach(input => {
 });
 
 // content tabs
-
-// var activePage = 'home';
-// var homePage = document.getElementById(activePage);
-
-// homePage.style.display = 'block';
-
-// function showSkills() {
-//   document.getElementById('home').style.display = '';
-//   document.getElementById('skills').style.display = 'block';
-// };
-
-var activePage = document.getElementById('home');
+var activePage = document.getElementById('skills');
 activePage.style.display = 'block';
+
+function showPage(newPageID) {
+  activePage.style.display = '';
+  var newPage = document.getElementById(newPageID);
+  newPage.style.display = 'block';
+  activePage = newPage;
+}
 
 const navLinks = document.querySelectorAll('.nav-link');
 
+navLinks.forEach(function(navLink) {
+  navLink.addEventListener('click', function() {
+    var newPageID = navLink.getAttribute('data-page');
+    showPage(newPageID);
+  });
+});
+
+// active page/button
 navLinks.forEach(link => {
   link.addEventListener('click', function() {
     navLinks.forEach(link => {
@@ -50,20 +54,7 @@ navLinks.forEach(link => {
   });
 });
 
-navLinks.forEach(function(navLink) {
-  navLink.addEventListener('click', function() {
-    var newPageID = navLink.getAttribute('data-page');
-    showPage(newPageID);
-  });
-});
-
-function showPage(newPageID) {
-  activePage.style.display = '';
-  var newPage = document.getElementById(newPageID);
-  newPage.style.display = 'block';
-  activePage = newPage;
-}
-
+// slide nav to top
 function slideToNav() {
   var nav = document.querySelector("nav");
   if (nav) {
@@ -84,4 +75,6 @@ function slideToFooter() {
   };
   window.scrollTo(scrollOptions);
 }
+
+
 
