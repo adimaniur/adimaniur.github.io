@@ -98,6 +98,9 @@ function showSkills(skills) {
   //   return a.name.localeCompare(b.name);
   // });
   var html = skills.map(function (skill) {
+    if (skill.endorcements > 4) {
+      return `<li class="important">${skill.name} - ${skill.endorcements}</li>`
+    }
    return `<li>${skill.name} - ${skill.endorcements}</li>`
   });
   
