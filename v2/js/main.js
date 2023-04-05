@@ -49,7 +49,7 @@ function slideToNav() {
 
 // nav functionality
 var activePage = "skills";
-show(activePage);
+showPage(activePage);
 
 function hide(id) {
   document.getElementById(id).style.display = "";
@@ -64,11 +64,16 @@ function hideAllPages() {
   pages.forEach(function (page) {
     hide(page.id);
   });
+  var navLink = document.querySelector(`.nav-links a[data-page="${activePage}"]`);
+  navLink.classList.remove('active');
 }
 
 function showPage(id) {
   hideAllPages();
   show(id);
+  var navLink = document.querySelector(`.nav-links a[data-page="${id}"]`);
+  navLink.classList.add("active");
+  activePage = id;
 }
 
 document.querySelector(".nav-links").addEventListener("click", function (e) {
@@ -109,7 +114,5 @@ function showSkills(skills) {
   var container = document.querySelector('#skills ul');
   container.innerHTML = html.join("");
 }
-
-
 
 loadSkills();
