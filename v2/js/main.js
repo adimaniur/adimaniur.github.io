@@ -88,10 +88,14 @@ function showSkills(skills) {
   container.innerHTML = html.join("");
 }
 
-fetch("./skills.json")
+function loadSkills() {
+  fetch("./skills.json")
   .then(function (r) {
     return r.json();
   })
   .then(function (skills) {
     showSkills(skills);
   });
+}
+
+loadSkills();
