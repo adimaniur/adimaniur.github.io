@@ -78,16 +78,7 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
   }
 });
 
-// insert skill into html
-function showSkills(skills) {
-  var html = skills.map(function (skill) {
-   return `<li>${skill.name} - ${skill.endorcements}</li>`
-  });
-  
-  var container = document.querySelector('#skills ul');
-  container.innerHTML = html.join("");
-}
-
+// fetch data from skills.json
 function loadSkills() {
   fetch("./skills.json")
   .then(function (r) {
@@ -97,5 +88,23 @@ function loadSkills() {
     showSkills(skills);
   });
 }
+
+// load skills into html
+function showSkills(skills) {
+  skills.sort(function (a, b) {
+    return a.endorcements - b.endorcements;
+  });
+  // skills.sort(function (a, b) {
+  //   return a.name.localeCompare(b.name);
+  // });
+  var html = skills.map(function (skill) {
+   return `<li>${skill.name} - ${skill.endorcements}</li>`
+  });
+  
+  var container = document.querySelector('#skills ul');
+  container.innerHTML = html.join("");
+}
+
+
 
 loadSkills();
