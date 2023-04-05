@@ -78,22 +78,8 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
   }
 });
 
-//insert skill into html
-function showSkills() {
-  var skills = [
-    {
-      name: "html",
-      endorcements: 5,
-    },
-    {
-      name: "css",
-      endorcements: 15,
-    },
-    {
-      name: "js",
-      endorcements: 25,
-    },
-  ];
+// insert skill into html
+function showSkills(skills) {
   var html = skills.map(function (skill) {
    return `<li>${skill.name} - ${skill.endorcements}</li>`
   });
@@ -102,4 +88,10 @@ function showSkills() {
   container.innerHTML = html.join("");
 }
 
-showSkills();
+fetch("./skills.json")
+  .then(function (r) {
+    return r.json();
+  })
+  .then(function (skills) {
+    showSkills(skills);
+  });
